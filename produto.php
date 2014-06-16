@@ -1,11 +1,11 @@
 <?php
-    $conexao = mysqli_connect("localhost", "root", "", "wd43");
-    $dados = mysqli_query($conexao, "SELECT * FROM produtos WHERE id = $_GET[id]");
-    $produto = mysqli_fetch_array($dados);
+$conexao = mysqli_connect("localhost", "root", "", "wd43");
+$dados = mysqli_query($conexao, "SELECT * FROM produtos WHERE id = $_GET[id]");
+$produto = mysqli_fetch_array($dados);
 
-    $cabecalho_title = "Produto da Mirror Fashion";
-    $cabecalho_css = '<link rel="stylesheet" href="css/produto.css">';
-    $cabecalho_css = '<link rel="stylesheet" href="css/estilos.css">';
+$cabecalho_title = "Produto da Mirror Fashion";
+$cabecalho_css = '<link rel="stylesheet" href="css/produto.css">';
+$cabecalho_css = '<link rel="stylesheet" href="css/estilos.css">';
 ?>
 
 <link rel="stylesheet" href="css/produto.css">
@@ -23,6 +23,7 @@
 
                 <p> <h2>Por apenas <?= $produto["preco"] ?> </h2> </p>
                 <input type="hidden" name="preco" value="<?= $produto["preco"] ?>">
+                <input type="hidden" name="id" value="<?= $produto["id"] ?>">
 
                 <fieldset class="cores">
                     <legend>Escolha a cor:</legend>
