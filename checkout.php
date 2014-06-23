@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
     <head>
@@ -23,18 +22,6 @@
         </style>
 
     </style>
-    <script>
-        document.querySelector('input[type=email]').oninvalid = function() {
-// remove mensagens de erro antigas
-            this.setCustomValidity("");
-// reexecuta validação
-            if (!this.validity.valid) {
-// se inválido, coloca mensagem de erro
-                this.setCustomValidity("Email inválido");
-            }
-        };
-
-    </script>
 </head>
 <body>
 
@@ -46,7 +33,7 @@
 
                     <button class="navbar-toggle" type="button"
                             data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="glyphicon glyphicon-align-justify"></span>
+                        <span class="glyphicon glyphicon-th-large"></span>
 
                     </button>
 
@@ -151,8 +138,18 @@
 
         </div>
     </div>
-
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script>
+        document.querySelector('input[type=email]').oninvalid = function() {
+            // remove mensagens de erro antigas
+            this.setCustomValidity("");
+            // reexecuta validação
+            if (!this.validity.valid) {
+                // se inválido, coloca mensagem de erro
+                this.setCustomValidity("Email inválido");
+            }
+        };
+    </script>
 </body>
 </html>
