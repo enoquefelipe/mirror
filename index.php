@@ -42,11 +42,11 @@ include("_cabecalho.php");
 
 <div class="container">
     <section class="painel novidades">
-        <h2>Novidades</h2>
+        <h2>Novidades</h2>  
         <ol>
             <?php
             $conexao = mysqli_connect("127.0.0.1", "root", "", "WD43");
-            $dados = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY data DESC LIMIT 0, 6");
+            $dados = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY data DESC LIMIT 0, 12");
             while ($produto = mysqli_fetch_array($dados)):
                 ?>
                 <li>
@@ -60,6 +60,7 @@ include("_cabecalho.php");
                 </li>
             <?php endwhile; ?>
         </ol>
+        <button type="button">Mostra mais</button>
     </section>
 
     <section class="painel mais-vendidos">
@@ -67,7 +68,7 @@ include("_cabecalho.php");
         <ol>
             <?php
             $conexao = mysqli_connect("127.0.0.1", "root", "", "WD43");
-            $dados = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY vendas DESC LIMIT 0, 6");
+            $dados = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY vendas DESC LIMIT 0, 122222");
             while ($produto = mysqli_fetch_array($dados)):
                 ?>
                 <li>
@@ -81,9 +82,11 @@ include("_cabecalho.php");
                 </li>
             <?php endwhile; ?>
         </ol>
+        <button type="button">Mostra mais</button>
     </section>
 </div>
 <?php include("_rodape.php"); ?>
+<script src="js/jquery.js"></script>
 <script src="js/home.js"></script>
 </body>
 </html>	
