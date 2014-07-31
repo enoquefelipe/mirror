@@ -1,6 +1,7 @@
 
 <?php
 $cabecalho_css = '<link rel="stylesheet" href="css/sobre.css">';
+$cabecalho_title = 'Sobre';
 include '_cabecalho.php';
 ?>
 
@@ -79,14 +80,26 @@ include '_cabecalho.php';
         <li>Mais de um milhão de funcionários em todo o mundo</li>
     </ul>
 
+    <br>
+
     <a href="https://maps.google.com.br/?q=Jacarezinho">
         Jacarezinho, no Paraná
     </a>
+
+    <br>
+
+    <center>
+        <iframe width="420" height="315" src="//www.youtube.com/embed/Tb06abHE4hY" frameborder="0" allowfullscreen>
+        </iframe>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58510.188892018945!2d-46.63211279999999!3d-23.572508549999952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949643f466e0dacb%3A0x63c053a2e723b5f5!2sHospital+e+Maternidade+Santa+Joana!5e0!3m2!1spt-BR!2sbr!4v1406838158866" width="600" height="450" frameborder="0" style="border:0"></iframe> 
+    </center>
 
     <div id="rodape">
         <img src="img/logo.png">
         &copy; Copyright Mirror Fashion
     </div>
+
     <?php include '_rodape.php'; ?>
 </div>
 </body>
